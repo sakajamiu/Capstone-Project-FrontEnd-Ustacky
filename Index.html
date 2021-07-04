@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf -8">
+    <meta name="viewport" content="width =device-width, initial-scale = 1.0">
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <title> E-commerce </title>
+</head>
+
+<body>
+    <!-- navigation div-->
+    <div class="nav">
+        <a href="#" class="logo"><img src="images/EMS.svg"></a>
+        <a href="#intro" id="center1">Intro</a>
+        <a href="#about" id="center2">About </a>
+        <a href="#shop" id="center3">Shop</a>
+        <a href="#shop" class="right" id="cartImage"><img src="images/cart.png"><span id="product-count">0</span></a>
+    </div>
+    <!-- introduction section div-->
+    <div class="intro" id="intro">
+        <div class="intro-main">
+
+            <div class="h1">
+                <h1>THE<br> E-MILLENIAL <br>STORE </h1>
+            </div>
+            <div class="img"> <img src="images/heroImage.svg"></div>
+        </div>
+        <a href="#shop"><button>SHOP NOW</button></a>
+    </div>
+    <!-- Div for the About section-->
+    <div class="about" id="about">
+        <p>
+            E-Millenial Store is a hypothetical online store for gadgets we believe every
+            'Millenial' or 'Gen-Z' should have today.
+        </p>
+        <p>
+            We've gots mobile phones, laptops, smartwatches and other gadgets. Explore all
+            our gadgets and choose the one that suits you
+        </p>
+    </div>
+    <!-- div for the shop section-->
+    <div class="shop" id="shop">
+        <h2> OUR GADGETS</h2>
+        <div class="shop-items">
+            <div id="p1">
+                <div class="product-container">
+                    <img src="images/product1.png">
+                    <div class="pricing-hover">
+                        <div class="price">
+                            <p> Price</p>
+                            <p>₦500000</p>
+                        </div>
+                    </div>
+                </div>
+                <h3>SAMSUNG TV</h3>
+                <button class="shopButton" id="p1" name="Samsung TV" onclick="addToCarts(0)">ADD TO CART</button>
+            </div>
+            <div id="p2">
+                <div class="product-container">
+                    <img src="images/product2.png">
+                    <div class="pricing-hover">
+                        <div class="price">
+                            <p> Price</p>
+                            <p>₦250,000</p>
+                        </div>
+                    </div>
+                </div>
+                <h3>PIXEL 4a</h3>
+                <button class="shopButton" id="p2" name="Pixel 4a" onclick="addToCarts(1)">ADD TO CART</button>
+            </div>
+            <div id="P3">
+                <div class="product-container">
+                    <img src="images/product3.png">
+                    <div class="pricing-hover">
+                        <div class="price">
+                            <p> Price</p>
+                            <p>₦300,000</p>
+                        </div>
+                    </div>
+                </div>
+                <h3>PS 5</h3>
+                <button class="shopButton" id="p3" name="PS 5" onclick="addToCarts(2)">ADD TO CART</button>
+            </div>
+            <div id="p4">
+                <div class="product-container">
+                    <img src="images/product4.png">
+                    <div class="pricing-hover">
+                        <div class="price">
+                            <p> Price</p>
+                            <p>₦800,000</p>
+                        </div>
+                    </div>
+
+                </div>
+                <h3>MACBOOK AIR</h3>
+                <button class="shopButton" id="p4" name="MacBook Air" onclick="addToCarts(3)">ADD TO CART</button>
+            </div>
+            <div id="p5">
+                <div class="product-container">
+                    <img src="images/product5.png">
+                    <div class="pricing-hover">
+                        <div class="price">
+                            <p> Price</p>
+                            <p>₦95,000</p>
+                        </div>
+                    </div>
+                </div>
+                <h3>APPLE WATCH</h3>
+                <button class="shopButton" id="p5" name='Apple Watch' onclick="addToCarts(4)">ADD TO CART</button>
+            </div>
+            <div id="p6">
+                <div class="product-container">
+                    <img src="images/product6.png">
+                    <div class="pricing-hover">
+                        <div class="price">
+                            <p> Price</p>
+                            <p>₦75,000</p>
+                        </div>
+                    </div>
+                </div>
+                <h3>AIR PODS</h3>
+                <button class="shopButton" id="p6" name="Air Pods" onclick="addToCarts(5)">ADD TO CART</button>
+            </div>
+        </div>
+    </div>
+    <!--footer element of the landing page-->
+    <div class="footer">
+        <div class="footer-item">
+            <img src="images/EMS.svg">
+        </div>
+        <div class="footer-item">
+            <p> Designed and crafted by Jamiu Saka Afolorunsho</p>
+        </div>
+    </div>
+    <div class="product-hover">
+        <div class="product-price"></div>
+    </div>
+    <!--modal skeleton body for cart-->
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-content">
+            <div class="cartList">
+                <table id="cart-table">
+                    <thead>
+                        <tr>
+                            <th>S/N</th>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+
+            </div>
+            <div cartForm>
+                <form name="cartForm">
+                    <div>
+                        <input type="text" placeholder="your name" name="userNames" id="userName">
+                        <p id="nameText"></p>
+                    </div>
+                    <div>
+                        <input type="email" placeholder="your email" name="userEmails" id="userEmail">
+                        <p id="emailText"></p>
+                    </div>
+                    <div>
+                        <input type="number" placeholder="your phone number" name="userPhoneNos" id="userPhoneNo">
+                        <p id="userPhone"></p>
+                    </div>
+                </form>
+            </div>
+            <div class="cart-total">
+                <h3>Total Amount to be Paid</h3>
+                <h2 id="total"></h2>
+            </div>
+            <div class="cart-footer">
+                <button id="continueShopping">Continue Shopping</button>
+                <button id="checkOut">Checkout</button>
+            </div>
+        </div>
+    </div>
+    <!-- payment summary modal-->
+    <div id ="paymentSummary">
+        <div class=" paymentContent">
+            <div class="summaryHeading">
+                <p> Thank You,</p>
+                <p id="customerName"></p>
+                <p>, Your order Has been Received</p>
+            </div>
+            <div id="successImage">
+                <img src="images/check.svg">
+            </div>
+            <div id="summaryTable">
+                <h3> Summary</h3>
+                <table>
+                    <thead>
+                        <tr>
+                        <th>S/N</th>
+                        <th>Item</th>
+                        <th>Quality</th>
+                        </tr>
+                    </thead>
+                    <tbody id="paymentTbody"></tbody>
+                </table>
+                <button id= "refresh">ok</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="Script.js"></script>
+</body>
+
+</html>

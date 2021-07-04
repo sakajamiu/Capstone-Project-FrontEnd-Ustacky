@@ -1,0 +1,456 @@
+*{
+box-sizing: border-box;
+padding: 0%;
+margin: 0%;
+}
+
+/* styling the desktop view of the nav*/
+.nav{
+    font-size: 22px;
+    padding: 14px 16px;
+    background-color: #FFE9D6;
+    overflow: hidden;
+    position: relative;
+    background-color: #FFE9D6;
+ 
+}
+.nav a{
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 16px;
+    color: black;
+}
+#center1{
+    float: none;
+    position: absolute;
+    top: 40%;
+    left:40%;
+    transform: translate(-50% -50%);
+}
+#center2{
+    float: none;
+    position: absolute;
+    top: 40%;
+    left:50%;
+    transform: translate(-50% -50%);
+}#center3 {
+    float: none;
+    position: absolute;
+    top: 40%;
+    left:60%;
+    transform: translate(-50% -50%);
+}
+.nav .right{
+    color: white;
+    background-color: #FF9A3D;
+    border-radius: 2em;
+    float: right;
+    margin-right: 20px;
+}
+.nav .logo{
+    margin-left: 20px;
+}
+/* styling hte mobile view of the nav*/
+@media screen and (max-width: 650px){
+    .nav a{
+        float: none;
+        display: block;
+        padding: 2px;
+        margin: 0px;
+    }
+     #center1, #center2, #center3{
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+    }.nav .right{
+        padding: 5px 5px;
+        float: none;
+        margin-right: 0px;
+    }
+}
+/* styling the desktop view of the introduction section*/
+.intro{
+    background-color:#FFE9D6 ;
+    text-align: center;
+}
+.intro-main{
+    display: flex;
+    padding: 14px 16px;
+    margin: 0px;
+}
+.intro-main h1{
+    font-size: 45px;
+    padding-top: 80px;
+    line-height: 1.5;
+    font-weight: 900;
+    padding-left: 40px;
+    padding-right: 0px;
+    text-align: left;
+    color: #FF9A3D;
+    margin-top: 40px;
+    
+}
+.intro-main img{
+    max-width: 100%;
+    height: auto;
+
+}
+.intro button{
+    padding: 15px 100px;
+    align-self: center;
+    background-color: #FF9A3D;
+    color: white;
+    border-color: #FF9A3D;
+    border-radius: 7px;
+    border-style: none;
+    font-size: 17px;
+    position: relative;  
+    margin-bottom: 20px; 
+}
+/* styling the mobile view of the introduction section*/
+@media screen and (max-width: 1000px){
+    .intro-main h1{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width:700px){
+    .intro-main h1{
+        font-size: 27px;
+        margin-top: auto;
+        padding: auto;
+    }
+}
+@media screen and (max-width: 500px){
+    .intro-main{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .intro-main h1{
+        margin-top: 0px ;
+        padding-top: 0px;
+        font-size: 25px;
+    }
+}
+/* styling the about section of the landing page*/
+.about{
+    padding: 40px;
+    background-color: black;
+
+}
+.about p{
+    color: white;
+    font-size: 28px;
+    line-height: 1.5;
+    text-align: center !important;
+}
+/*styling the shop section of the landing page*/
+.shop{
+    text-align: center;
+
+}
+.shop h2{
+    padding-bottom: 10px;
+    padding: 14px 16px;
+    font-weight: 900;
+}
+.shop h3{
+    padding: 10px;
+}
+.shop button{
+    padding: 15px 100px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    color:white;
+    background-color: #FF7A00;
+    border-color: #fF7A00;
+    border-style: none;
+    border-radius: 7px;
+}
+/* styling the hover property of the shop item*/
+.product-container{
+    position: relative;
+}
+.pricing-hover{
+    position: absolute;
+    bottom: 50%;
+    left:0;
+    right:0;
+    background-color:rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transform: .5s ease;
+}
+.price{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    overflow: hidden;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+
+}
+.price p:first-child {
+    text-decoration: underline;
+    padding-bottom: 35px;
+    font-size: 20px;
+}
+.product-container:hover .pricing-hover{
+    bottom: 0;
+    height: 100%;
+}
+/* styling shop items for small mobile screen*/
+.shop-items{
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
+    flex-direction:column;
+    flex-wrap: wrap;
+    flex-basis: auto;
+}
+.shop img{
+    width: 100%;
+    height: auto;
+}
+/*styling large mobile screen view  of shop items*/
+@media screen and (min-width :650px){
+    .shop-items{
+        grid-template-columns: auto auto; 
+    }
+    .shop img{
+        object-fit: contain;
+    }
+
+}
+/*styling desktop view of shop items*/
+@media screen and (min-width: 950px){
+    .shop-items{
+        grid-template-columns: auto auto auto;
+    }
+    .shop img{
+        object-fit: contain;
+    }
+}
+/*styling the footer element*/
+.footer{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: black;
+    padding: 20px;
+    flex: 50%;
+}
+.footer p{
+    color: white;
+    font-size: 20px;
+    padding: 14px 16px;
+    text-align: right;
+}
+@media screen and (max-width : 650px){
+    .footer{
+        grid-template-columns: auto;
+    }
+    .footer p{
+        text-align: left;
+        padding-left: 0px;
+        font-size: 17px;
+    }
+}
+/*styling the cart modal */
+.cart-modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.cart-content{
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid;
+    width: 60%;
+}
+.cart-modal input {
+    width:95%;
+    padding: 14px 16px;
+    margin: 15px;
+    text-align: left;
+    background-color: #FFE9DC;
+    border-style: ridge;
+}
+.cart-modal .cart-total{
+    padding: 16px;
+    text-align: center;
+}
+.cart-modal .cart-footer{
+    text-align: right;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.cart-footer button:first-child{
+    background-color:#FFE9DC ;
+    padding: 10px 50px;
+    border-style: none;
+    border-radius: 7px;
+    color: black;
+}
+.cart-footer button{
+    background-color: #FF7A00;
+    padding: 10px 50px;
+    color: white;
+    border-style: none;
+    border-radius: 7px;
+}
+.cart-modal table{
+    text-align: center;
+    padding:14px 16px ;
+    width: 100%;
+}
+@media screen and (max-width:600px){
+    .cart-footer button, .cart-footer button:first-child{
+        margin-top: 15px;
+        padding: auto;
+    
+    }
+    .cart-modal .cart-footer{
+        text-align: center;
+        padding: auto;
+    }
+}
+
+#rowButton{
+    background-color: #FFcd9e;
+    color: black;
+    border-style: none;
+    border-radius: 7px;
+    padding: 5px 10px;
+    font-weight: 800;
+    font-size: 14px;
+}
+td button{
+    color: white;
+    background-color:#FF7A00 ;
+    border-radius: 10px;
+    border-style: none;
+    padding: 0px 10px;
+    font-weight: 900;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+td,th{
+    padding-bottom: 15px;
+    padding-right: 5px;
+}
+form p {
+    color: red;
+    padding-left: 14px;
+    margin: 1px;
+    text-align: center;
+}
+/* styling the cart table for small screen*/
+@media screen and (max-width: 768px) {
+
+    tbody, #rowButton , td, th, td button, .cart-content {
+        padding: 0%;
+        margin: auto;
+        width: auto;
+        font-size: 14px;
+        font-weight:200;
+ 
+    }
+    .cart-modal input{
+        width: 90%;
+    }
+     #rowButton{
+        padding: 3px 5px;
+    }
+    td button{
+        padding: 0px 5px;
+    }
+    
+}
+/* styling the payment summary modal*/
+#paymentSummary{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.paymentContent{
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid;
+    width: 60%;
+    text-align: center;
+}
+.summaryHeading p{
+    text-align: center;
+    font-size: 21px;
+    display: inline;
+    font-weight: 600;
+    
+
+}
+.summaryHeading p:nth-child(2){
+    color:#FF9A3D;
+}
+
+#successImage img{
+    /*margin-left: 35%;*/
+    width: 150px;
+    height: 150px;
+}
+#summaryTable{
+    margin: 20px 0px;
+}
+#summaryTable h3{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300;
+}
+#summaryTable table{
+    text-align: left;
+    padding:14px 16px ;
+    width: 100%;
+  
+}
+#summaryTable button{
+    float:right; 
+    color: white;
+    border-style: none;
+    border-radius: 7px;
+    padding: 5px 100px;
+    font-weight: 800;
+    background-color: #FF7A00;
+    font-size: 20px;
+   
+}
+@media screen and (max-width: 500px){
+  
+    #summaryTable table, td,th{
+        padding: 0%;
+        margin: auto;
+        width: auto;
+    }
+    #summaryTable button{
+        font-weight: 300;
+        font-size: 14px;
+        padding: 5px 50px;
+    }
+    
+}
